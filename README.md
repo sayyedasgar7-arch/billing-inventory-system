@@ -38,3 +38,17 @@ cp .env.example .env
 npm run dev
 
 App runs at http://localhost:5173.
+
+## Screenshots
+
+### Products (with low-stock alert)
+![Products Page](screenshots/products%20page.png)
+
+### Customers
+![Customers Page](screenshots/customers%20page.png)
+
+### New Invoice
+![New Invoice Page](screenshots/new%20invoice%20page.png)
+
+### Invoices List
+![Invoices Page](screenshots/invoices%20page.png)
