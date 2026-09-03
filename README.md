@@ -1,5 +1,7 @@
 # Billing & Inventory Management System
 
+![CI](https://github.com/sayyedasgar7-arch/billing-inventory-system/actions/workflows/ci.yml/badge.svg)
+
 A shop owner can manage products, create customer invoices, and stock levels update automatically as bills are created or cancelled.
 
 ## Tech Stack
