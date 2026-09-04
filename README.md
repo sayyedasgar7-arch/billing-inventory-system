@@ -39,6 +39,32 @@ npm run dev
 
 App runs at http://localhost:5173.
 
+## API Documentation
+
+| Method | Endpoint | Purpose | Body |
+|---|---|---|---|
+| GET | /api/products | List/search/paginate products | — |
+| POST | /api/products | Add product | `{name, sku, category, unit_price, quantity, low_stock_threshold}` |
+| PUT | /api/products/:id | Update product | same as above |
+| DELETE | /api/products/:id | Delete product | — |
+| GET | /api/customers | List customers | — |
+| POST | /api/customers | Add customer | `{name, phone, email, address}` |
+| PUT | /api/customers/:id | Update customer | same as above |
+| DELETE | /api/customers/:id | Delete customer | — |
+| GET | /api/invoices | List invoices | — |
+| POST | /api/invoices | Create invoice (deducts stock) | `{customer_id, items:[{product_id, quantity}], tax_percent, discount_percent}` |
+| GET | /api/invoices/:id | View invoice detail | — |
+| PUT | /api/invoices/:id | Cancel invoice (restores stock) | `{status: "cancelled"}` |
+| DELETE | /api/invoices/:id | Delete invoice record | — |
+| POST | /api/auth/register | Create login account | `{name, email, password}` |
+| POST | /api/auth/login | Log in, get JWT | `{email, password}` |
+
+## Database Schema
+See `backend/database/schema.sql`. Tables: `users`, `customers`, `products`, `invoices`, `invoice_items`.
+
+## Assumptions & Future Improvements
+See `WRITEUP.md`.
+
 ## Screenshots
 
 ### Products (with low-stock alert)
